@@ -5,5 +5,6 @@
  * Makes imports cleaner throughout the app.
  */
 
-export { HomeScreen } from './HomeScreen';
-export { DetailsScreen } from './DetailsScreen';
+export {HomeScreen} from './HomeScreen';
+export {DetailsScreen} from './DetailsScreen';
+export {SplashScreen} from './SplashScreen';
