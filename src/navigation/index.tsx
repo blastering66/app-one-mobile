@@ -14,6 +14,7 @@ import * as React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {HomeScreen} from '@screens/HomeScreen';
 import {DetailsScreen} from '@screens/DetailsScreen';
+import {SplashScreen} from '@screens/SplashScreen';
 import {useAppTheme} from '@hooks/useAppTheme';
 
 /**
@@ -21,6 +22,7 @@ import {useAppTheme} from '@hooks/useAppTheme';
  * Add new routes here as the app grows.
  */
 export type RootStackParamList = {
+  Splash: undefined;
   Home: undefined;
   Details: {itemId: number; title: string};
 };
@@ -32,7 +34,7 @@ export const AppNavigator: React.FC = () => {
 
   return (
     <Stack.Navigator
-      initialRouteName="Home"
+      initialRouteName="Splash"
       screenOptions={{
         headerStyle: {
           backgroundColor: colors.primary,
@@ -46,10 +48,20 @@ export const AppNavigator: React.FC = () => {
         },
       }}>
       <Stack.Screen
+        name="Splash"
+        component={SplashScreen}
+        options={{
+          headerShown: false,
+          animation: 'none',
+        }}
+      />
+      <Stack.Screen
         name="Home"
         component={HomeScreen}
         options={{
           title: 'AppOne',
+          animation: 'fade', // slide_from_right
+          animationDuration: 500,
         }}
       />
       <Stack.Screen
