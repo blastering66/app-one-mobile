@@ -7,7 +7,6 @@
 
 # Xcode
 #
-build/
 *.pbxuser
 !default.pbxuser
 *.mode1v3
@@ -41,8 +40,6 @@ local.properties
 # node.js
 #
 node_modules/
-npm-debug.log
-yarn-error.log
 
 # fastlane
 #
@@ -95,8 +92,6 @@ lerna-debug.log*
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
