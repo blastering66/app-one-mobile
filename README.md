@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
+## Features
+
+- User authentication (Login/Register)
+- Food menu catalog
+- **Upload Asset**: Upload files to AWS S3 (see [Upload Asset Documentation](docs/UPLOAD_ASSET.md))
+
 ## Getting Started
 
 First, run the development server:
@@ -19,6 +25,19 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Environment Configuration
+
+For the Upload Asset feature, create a `.env.local` file with your AWS S3 credentials:
+
+```env
+AWS_REGION=us-east-1
+AWS_ACCESS_KEY_ID=your_access_key_id
+AWS_SECRET_ACCESS_KEY=your_secret_access_key
+AWS_S3_BUCKET_NAME=your_bucket_name
+```
+
+See `.env.example` for a template.
 
 ## Learn More
 
