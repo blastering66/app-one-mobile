@@ -15,7 +15,7 @@ const eslintConfig = defineConfig([
   ]),
   {
     rules: {
-      'quotes': ['error', 'single', { 'avoidEscape': true, 'allowTemplateLiterals': false }],
+      quotes: ['error', 'single', { avoidEscape: true, allowTemplateLiterals: false }],
     },
   },
 ]);
