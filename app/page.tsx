@@ -61,10 +61,10 @@ export default function Home() {
         <div className='absolute inset-0 bg-black/20'></div>
         <div className='relative z-10 text-center px-4 max-w-4xl mx-auto'>
           <h1 className='text-6xl md:text-8xl font-bold mb-6 animate-fade-in'>
-            Welcome to QuickFood
+            Selamat Datang di QuickFood
           </h1>
           <p className='text-xl md:text-2xl mb-8 text-white/90'>
-            Delicious food delivered to your doorstep in minutes
+            Makanan lezat diantar ke pintu Anda dalam hitungan menit
           </p>
           <Link
             href='/menu'
