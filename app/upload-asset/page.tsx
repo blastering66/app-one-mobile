@@ -37,14 +37,14 @@ export default function UploadAssetPage() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (file) {
-      setFormData({ ...formData, file });
-      setErrors({ ...errors, file: undefined });
+      setFormData(prev => ({ ...prev, file }));
+      setErrors(prev => ({ ...prev, file: undefined }));
     }
   };
 
   const handleFileNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setFormData({ ...formData, fileName: e.target.value });
-    setErrors({ ...errors, fileName: undefined });
+    setFormData(prev => ({ ...prev, fileName: e.target.value }));
+    setErrors(prev => ({ ...prev, fileName: undefined }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
