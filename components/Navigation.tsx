@@ -17,16 +17,16 @@ export default function Navigation() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 bg-white dark:bg-zinc-900 shadow-md z-50">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <Link href="/" className="text-2xl font-bold text-orange-600">
+    <nav className='fixed top-0 left-0 right-0 bg-white dark:bg-zinc-900 shadow-md z-50'>
+      <div className='container mx-auto px-4'>
+        <div className='flex items-center justify-between h-16'>
+          <Link href='/' className='text-2xl font-bold text-orange-600'>
             QuickFood
           </Link>
           
-          <div className="flex items-center gap-6">
+          <div className='flex items-center gap-6'>
             <Link
-              href="/"
+              href='/'
               className={`hover:text-orange-600 transition-colors ${
                 isActive('/') ? 'text-orange-600 font-semibold' : 'text-gray-700 dark:text-gray-300'
               }`}
@@ -34,7 +34,7 @@ export default function Navigation() {
               Home
             </Link>
             <Link
-              href="/menu"
+              href='/menu'
               className={`hover:text-orange-600 transition-colors ${
                 isActive('/menu') ? 'text-orange-600 font-semibold' : 'text-gray-700 dark:text-gray-300'
               }`}
@@ -43,21 +43,21 @@ export default function Navigation() {
             </Link>
             
             {isAuthenticated ? (
-              <div className="flex items-center gap-4">
-                <span className="text-gray-700 dark:text-gray-300">
+              <div className='flex items-center gap-4'>
+                <span className='text-gray-700 dark:text-gray-300'>
                   Welcome, {user?.name}
                 </span>
                 <button
                   onClick={handleLogout}
-                  className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
+                  className='px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors'
                 >
                   Logout
                 </button>
               </div>
             ) : (
               <Link
-                href="/login"
-                className="px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors"
+                href='/login'
+                className='px-4 py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition-colors'
               >
                 Login
               </Link>
