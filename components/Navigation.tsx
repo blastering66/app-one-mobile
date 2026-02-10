@@ -41,6 +41,14 @@ export default function Navigation() {
             >
               Menu
             </Link>
+            <Link
+              href='/upload-asset'
+              className={`hover:text-orange-600 transition-colors ${
+                isActive('/upload-asset') ? 'text-orange-600 font-semibold' : 'text-gray-700 dark:text-gray-300'
+              }`}
+            >
+              Upload Asset
+            </Link>
             
             {isAuthenticated ? (
               <div className='flex items-center gap-4'>
